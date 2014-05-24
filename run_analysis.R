@@ -1,6 +1,6 @@
 run_analysis <- function(){
 
-     require("data.table") ## This function requires the use of the .SD functionality withing the data.table package
+     require("data.table") ## This function requires the use of the .SD functionality and the setnames() function within the data.table package
      
      ## Load information that is common to both the test and training sets
      activity <- read.table("./data/UCI HAR Dataset/activity_labels.txt")
@@ -63,11 +63,23 @@ run_analysis <- function(){
      rm(activity)
      
      ## Create a tidy data frame with that that averages the observations of each variable (in this case it is already a mean), for each activity and subject
-     ## This tidy dataset is created using the .SD function in the data.table package
+     ## This tidy dataset is aggregates the mean calculation using the .SD function in the data.table package
      summaryData <- data.table(summaryData)
      outputData <- summaryData[, lapply(.SD, mean), by = list(activityName, subjectId), .SDcols = 3:81]
      outputData <- outputData[order(outputData$activityName, outputData$subjectId),]
      
+     ## Rename variables using camel code naming standard, the setnames() function in the data.table package, and the gsub() function in the base package
+     setnames(outputData, gsub("\\(\\)", "", names(outputData)))## Remove parentheses
+     setnames(outputData, gsub("-", "", names(outputData))) ## Remove hyphens
+     setnames(outputData, gsub("mean", "Mean", names(outputData))) ## capitalize "mean" for the mean reference
+     setnames(outputData, gsub("std", "Std", names(outputData))) ## capitalize "std" for the Standard Deviation Reference
+     setnames(outputData, gsub("meanFreq", "Mean", names(outputData))) ## replace "meanFreq" with just "Mean". The first character in the variable name is an identifier for frequency and having "meanFreq" would be redundant
+     setnames(outputData, gsub("BodyBody", "Body", names(outputData))) ## correct variable names that appear to be mislabled with duplication of Body
+     setnames(outputData, gsub("Mag", "Magnitude", names(outputData))) ## express "Mag" as its intended full expression magnitude
+     setnames(outputData, gsub("^t", "time", names(outputData))) ## Fully identify the class of measurement (e.g. Time vs. Frequency) in the variable name
+     setnames(outputData, gsub("^f", "frequency", names(outputData))) ## Fully identify the class of measurement (e.g. Time vs. Frequency) in the variable name
+     
+
      ## Write outputData to a tab delimited file
      write.table(outputData,file = "tidyData.txt", sep = "\t")
 }
