@@ -61,5 +61,5 @@ This analysis function follows the high-level process below. The code file conta
 ### Dependencies  
 This function requires the data.table package downloadable from the CRAN repository.
 
-[UCI link](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
+[UCI link](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)  
 [codebook link] (https://github.com/LoneTree/GettingAndCleaningData/blob/master/CodeBook.md)
