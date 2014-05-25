@@ -13,16 +13,11 @@ files in repo:
 The purpose of this project is to demonstrate my ability to collect, work with, and clean a data set. An additional goal is to prepare tidy data that can be used for later analysis. The function that is written should produce a tidy data set as described below.  
 
 ### Files used and data structure  
-The data are a pre-formed data set obtained from the [University of California - Irvine Machine Learning Repository][UCI link]. The data used in this function are from collected from accelerometers in smartphones, 
+The data are a pre-formed data set obtained from the [University of California - Irvine Machine Learning Repository](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip). The data used in this function are from collected from accelerometers in smartphones, 
 
 Within the zip file downloaded are the following files:
 * activity_labels.txt - text file descriptions of the activities monitored for this data set. Activities monitored are:
-> * Walking
-> * Walking up stairs
-> * Walking down stairs
-> * Sitting
-> * Standing 
-> * Laying
+> Walking, Walking up stairs, Walking down stairs, Sitting, Standing, Laying
 * features.txt - list of features used as columns (variables) in this data set. 
 * features_info.txt - file that describes the purpose and derivation of many of the variables in the data set
 * /test/X_test.txt - the data set of measurements for the test cohort
@@ -60,6 +55,5 @@ This analysis function follows the high-level process below. The code file conta
 
 ### Dependencies  
 This function requires the data.table package downloadable from the CRAN repository.
-
-[UCI link](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)  
-[codebook link] (https://github.com/LoneTree/GettingAndCleaningData/blob/master/CodeBook.md)
+ 
+[codebook](https://github.com/LoneTree/GettingAndCleaningData/blob/master/CodeBook.md)
