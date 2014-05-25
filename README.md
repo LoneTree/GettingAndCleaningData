@@ -1,12 +1,12 @@
 ### Attribution  
-The code and data in this repository was developed by Brandon Silva and uploaded to github on May 24, 2014. 
-email: brandon.j.silva@gmail.com
-github: www.github.com/LoneTree
+The code and data in this repository was developed by Brandon Silva and uploaded to github on May 24, 2014.  
+email: brandon.j.silva@gmail.com  
+github: www.github.com/LoneTree  
 project github repo: www.github.com/LoneTree/GettingAndCleaningData  
-files in repo: 
-* README.md (this file)
-* CodeBook.md - This file describes the variables used in this project, their derivation, and naming convention
-* run_analysis.R - source code for the function that produces the output data file "tidyData.txt"
+files in repo:  
+* README.md (this file)  
+* CodeBook.md - This file describes the variables used in this project, their derivation, and naming convention  
+* run_analysis.R - source code for the function that produces the output data file "tidyData.txt"  
 * tidyData.txt - output file for the project. This is a tab delimited file. Description of the data within this file is located in the _Introduction and motivation_ section
 
 ### Introduction and motivation  
