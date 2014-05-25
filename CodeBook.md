@@ -10,7 +10,7 @@ The measurement variables are named according to the following naming convention
 * The axis for which the measurement was taken _X_, _Y_ or _Z_, if appropriate
 
 
-#### List of mesurement variables
+#### List of measurement variables
 1. activityName  
 2. subjectId  
 3. timeBodyAccMeanX  
