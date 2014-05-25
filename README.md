@@ -45,18 +45,18 @@ The following assumptions have been made about the structure of the original dat
 7. The result desired by this assignment is essentially an average of averages. 
 
 ### Function Logic  
-This analysis function follows the high-level process below. The code file contains detailed comments and should be referred to if there are additional questions:
-1. Require the data.table package from CRAN
-2. Load common data across the train and test data sets (activities, features)
-3. Load the test data set and column bind the subject ids and activities to the test data set to create a consolidated dataset for test
-4. Cleanup and remove temporary data sets
-5. Load the train data set and column bind the subject ids and activities to the train data set to create a consolidated data set for train
-6. Cleanup and remove temporary data sets
-7. Create a data frame (summary.data) that combines the test and train data sets, subsetting to extract columns that only contain the variables related to the mean or standard deviation of a variable
-8. Remove the temporary individual test and train data sets
-9. Create a tidy data frame with that that averages the observations of each variable (in this case each observation is already a mean), for each activity and subject combination. This tidy dataset is aggregates the mean calculation using the .SD function in the data.table package
-10. Cleanup the variable names to ensure variable / column names comply with camel code naming standards and are sufficiently compact AND descriptive.
-11. Write the tidy data frame to a tab delimited text file.
+This analysis function follows the high-level process below. The code file contains detailed comments and should be referred to if there are additional questions
+1. Require the data.table package from CRAN  
+2. Load common data across the train and test data sets (activities, features)  
+3. Load the test data set and column bind the subject ids and activities to the test data set to create a consolidated dataset for test  
+4. Cleanup and remove temporary data sets  
+5. Load the train data set and column bind the subject ids and activities to the train data set to create a consolidated data set for train  
+6. Cleanup and remove temporary data sets  
+7. Create a data frame (summary.data) that combines the test and train data sets, subsetting to extract columns that only contain the variables related to the mean or standard deviation of a variable  
+8. Remove the temporary individual test and train data sets  
+9. Create a tidy data frame with that that averages the observations of each variable (in this case each observation is already a mean), for each activity and subject combination. This tidy dataset is aggregates the mean calculation using the .SD function in the data.table package  
+10. Cleanup the variable names to ensure variable / column names comply with camel code naming standards and are sufficiently compact AND descriptive.  
+11. Write the tidy data frame to a tab delimited text file.  
 
 ### Dependencies  
 This function requires the data.table package downloadable from the CRAN repository.
