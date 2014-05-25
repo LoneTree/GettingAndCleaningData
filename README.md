@@ -27,7 +27,7 @@ Within the zip file downloaded are the following files:
 * /train/y_train.txt - list of the numerical code for each record of measurements
 * /train/subject_train.txt - list of subject id codes for each record of measurements
 
-*_Data files for inertial signals were included in the data set but not used in the analysis that this function produces._*
+**_Data files for inertial signals were included in the data set but not used in the analysis that this function produces._**
 
 ###Assumptions  
 The following assumptions have been made about the structure of the original data set and informed the development of this analysis function.  
